@@ -48,6 +48,26 @@ body {
     padding-bottom: 4px;
 }
 
+.anotações .topico-git {
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+    box-shadow: 2px 2px 8px black;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-bottom: 4px;
+}
+
+.anotações .topico-java {
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+    box-shadow: 2px 2px 8px black;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-bottom: 4px;
+}
+
 .anotações .adicionar {
     margin-top: 5px;
     height: 30px;

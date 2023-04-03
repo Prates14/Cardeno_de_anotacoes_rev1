@@ -1,8 +1,10 @@
 /* Cada função para ocultar ou mostrar os itens de sua lista*/
 
-var container1 = document.querySelector('ul.html');//lista html
-var container2 = document.querySelector('ul.css');//lista css
-var container3 = document.querySelector('ul.js');//lista js
+var container1 = document.querySelector('ul.html'); //lista html
+var container2 = document.querySelector('ul.css'); //lista css
+var container3 = document.querySelector('ul.js'); //lista js
+var container4 = document.querySelector('ul.git'); //lista git
+var container5 = document.querySelector('ul.java'); //lista java
 
 //Mostrar ou ocultar itens da lista de html
 function mostrar1() {
@@ -26,6 +28,22 @@ function mostrar3() {
         container3.style.display = 'none';
     } else {
         container3.style.display = 'block';
+    }
+}
+//Mostrar ou ocultar itens da lista de git-github
+function mostrar4() {
+    if(container4.style.display === 'block') {
+        container4.style.display = 'none';
+    } else {
+        container4.style.display = 'block';
+    }
+}
+//Mostrar ou ocultar itens da lista de java
+function mostrar5() {
+    if(container5.style.display === 'block') {
+        container5.style.display = 'none';
+    } else {
+        container5.style.display = 'block';
     }
 }
 
@@ -89,11 +107,53 @@ function JSbtn() {
     localStorage.setItem("itensJ", JSON.stringify(informacoes_J));
 }
 
+//Acrescentar mais itens a lista de GIT-GITHUB
+var informacoes_G = [];
+var armazenar_G = [];
+
+function GITbtn() {
+    var nota_G = document.querySelector('input#notagit').value;
+    var mylist_G = document.querySelector('ul.git');
+    var frase = document.createElement("li");
+
+    if(localStorage.key(3) != null){
+        informacoes_G = armazenar_G
+    }
+
+    frase.innerText = nota_G;
+    mylist_G.appendChild(frase);
+    informacoes_G.push(nota_G);
+    
+    localStorage.setItem("itensG", JSON.stringify(informacoes_G));
+}
+
+//Acrescentar mais itens a lista de JAVA
+var informacoes_JAVA = [];
+var armazenar_JAVA = [];
+
+function JAVAbtn() {
+    var nota_JAVA = document.querySelector('input#notajava').value;
+    var mylist_JAVA = document.querySelector('ul.java');
+    var frase = document.createElement("li");
+
+    if(localStorage.key(4) != null){
+        informacoes_JAVA = armazenar_JAVA
+    }
+
+    frase.innerText = nota_JAVA;
+    mylist_JAVA.appendChild(frase);
+    informacoes_JAVA.push(nota_JAVA);
+    
+    localStorage.setItem("itensJAVA", JSON.stringify(informacoes_JAVA));
+}
+
 //Função que retorna as informações ('li') armazenadas em localStorage para o site
 function safe() {
     var mylist_H = document.querySelector('ul.html');
     var mylist_C = document.querySelector('ul.css');
     var mylist_J = document.querySelector('ul.js');
+    var mylist_G = document.querySelector('ul.git');
+    var mylist_JAVA = document.querySelector('ul.java');
 
 //Retornar a lista de HTML
     if(informacoes_H !== null) {
@@ -131,6 +191,29 @@ function safe() {
             
         });
     }
-    
+//Retornar a lista de GIT_GITHUB
+    if(informacoes_G !== null) {
+        var informacoes_G = JSON.parse(localStorage.getItem("itensG"));
+        informacoes_G.forEach(function(informacaoG) {
+        
+            var frase = document.createElement("li");
+            mylist_G.appendChild(frase);
+            frase.innerText = informacaoG;
+            armazenar_G.push(informacaoG);
+            
+        });
+    }
+//Retornar a lista de JAVA
+    if(informacoes_JAVA !== null) {
+        var informacoes_JAVA = JSON.parse(localStorage.getItem("itensJAVA"));
+        informacoes_JAVA.forEach(function(informacaoJAVA) {
+        
+            var frase = document.createElement("li");
+            mylist_JAVA.appendChild(frase);
+            frase.innerText = informacaoJAVA;
+            armazenar_JAVA.push(informacaoJAVA);
+            
+        });
+    }
 }
 

@@ -10,6 +10,7 @@
 <body onload="safe()">
     <h1 class="title">Minhas anotações de programação</h1>
     <div class="anotações">
+        <!-- Bloco de anotações - Assunto: HTML -->
         <div class="topico-html">
             <h4>Anotações sobre HTML <button onclick="mostrar1()">...</button></h4>
             <ul class="html" id="myList">
@@ -17,7 +18,7 @@
             </ul>
             <input type="button" name="pronto" value="PRONTO" class="adicionar" onclick="HTMLbtn()">
         </div>
-        
+        <!-- Bloco de anotações - Assunto: CSS -->
         <div class="topico-css">
             <h4>Anotações sobre CSS <button onclick="mostrar2()">...</button></h4>
             <ul class="css">
@@ -25,7 +26,7 @@
             </ul>
             <input type="button" name="pronto" value="PRONTO" class="adicionar" onclick="CSSbtn()">
         </div>
-        
+        <!-- Bloco de anotações - Assunto: JS -->
         <div class="topico-js">
             <h4>Anotações sobre Java Script <button onclick="mostrar3()">...</button></h4>
             <ul class="js">
@@ -33,7 +34,22 @@
             </ul>
             <input type="button" name="pronto" value="PRONTO" class="adicionar" onclick="JSbtn()">
         </div>
-        
+        <!-- Bloco de anotações - Assunto: GIT_GITHUB -->
+        <div class="topico-git">
+            <h4>Anotações sobre Git-Github <button onclick="mostrar4()">...</button></h4>
+            <ul class="git">
+                <input type="text" name="notagit" id="notagit">
+            </ul>
+            <input type="button" name="pronto" value="PRONTO" class="adicionar" onclick="GITbtn()">
+        </div>
+        <!-- Bloco de anotações - Assunto: JAVA -->
+        <div class="topico-java">
+            <h4>Anotações sobre JAVA <button onclick="mostrar5()">...</button></h4>
+            <ul class="java">
+                <input type="text" name="notajava" id="notajava">
+            </ul>
+            <input type="button" name="pronto" value="PRONTO" class="adicionar" onclick="JAVAbtn()">
+        </div>
     </div>
 
     <script defer src="main.js"></script>
