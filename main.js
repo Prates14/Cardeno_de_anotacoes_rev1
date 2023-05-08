@@ -48,170 +48,185 @@ function mostrar5() {
 }
 
 //Acrescentar mais itens a lista de HTML
-var informacoes_H = [];
-var armazenar_H = [];
+var informacoesH = [];
+var armazenarH = [];
 
-function HTMLbtn() {
-    var nota_H = document.querySelector('input#notahtml').value;
-    var mylist_H = document.querySelector('ul.html');
+function HtmlBtn() {
+    var notaH = document.querySelector('input#notahtml').value;
+    var mylistH = document.querySelector('ul.html');
     var frase = document.createElement("li");
+    frase.setAttribute('class', 'li')
 
     if(localStorage.key(0) != null){
-        informacoes_H = armazenar_H
+        informacoesH = armazenarH
     }
 
-    frase.innerText = nota_H;
-    mylist_H.appendChild(frase);
-    informacoes_H.push(nota_H);
+    frase.innerText = notaH;
+    mylistH.appendChild(frase);
+    informacoesH.push(notaH);
     
-    localStorage.setItem("itensH", JSON.stringify(informacoes_H));
+    localStorage.setItem("itensH", JSON.stringify(informacoesH));
 }
 
 //Acrescentar mais itens a lista de CSS
-var informacoes_C = [];
-var armazenar_C = [];
+var informacoesC = [];
+var armazenarC = [];
 
-function CSSbtn() {
-    var nota_C = document.querySelector('input#notacss').value;
-    var mylist_C = document.querySelector('ul.css');
+function CssBtn() {
+    var notaC = document.querySelector('input#notacss').value;
+    var mylistC = document.querySelector('ul.css');
     var frase = document.createElement("li");
+    frase.setAttribute('class', 'li')
 
     if(localStorage.key(1) != null){
-        informacoes_C = armazenar_C
+        informacoesC = armazenarC
     }
 
-    frase.innerText = nota_C;
-    mylist_C.appendChild(frase);
-    informacoes_C.push(nota_C);
+    frase.innerText = notaC;
+    mylistC.appendChild(frase);
+    informacoesC.push(notaC);
     
-    localStorage.setItem("itensC", JSON.stringify(informacoes_C));
+    localStorage.setItem("itensC", JSON.stringify(informacoesC));
 }
 
 //Acrescentar mais itens a lista de JS
-var informacoes_J = [];
-var armazenar_J = [];
+var informacoesJ = [];
+var armazenarJ = [];
 
-function JSbtn() {
-    var nota_J = document.querySelector('input#notajs').value;
-    var mylist_J = document.querySelector('ul.js');
+function JsBtn() {
+    var notaJ = document.querySelector('input#notajs').value;
+    var mylistJ = document.querySelector('ul.js');
     var frase = document.createElement("li");
+    frase.setAttribute('class', 'li')
 
     if(localStorage.key(2) != null){
-        informacoes_J = armazenar_J
+        informacoesJ = armazenarJ
     }
 
-    frase.innerText = nota_J;
-    mylist_J.appendChild(frase);
-    informacoes_J.push(nota_J);
+    frase.innerText = notaJ;
+    mylistJ.appendChild(frase);
+    informacoesJ.push(notaJ);
     
-    localStorage.setItem("itensJ", JSON.stringify(informacoes_J));
+    localStorage.setItem("itensJ", JSON.stringify(informacoesJ));
 }
 
 //Acrescentar mais itens a lista de GIT-GITHUB
-var informacoes_G = [];
-var armazenar_G = [];
+var informacoesG = [];
+var armazenarG = [];
 
-function GITbtn() {
-    var nota_G = document.querySelector('input#notagit').value;
-    var mylist_G = document.querySelector('ul.git');
+function GitBtn() {
+    var notaG = document.querySelector('input#notagit').value;
+    var mylistG = document.querySelector('ul.git');
     var frase = document.createElement("li");
+    frase.setAttribute('class', 'li')
 
     if(localStorage.key(3) != null){
-        informacoes_G = armazenar_G
+        informacoesG = armazenarG
     }
 
-    frase.innerText = nota_G;
-    mylist_G.appendChild(frase);
-    informacoes_G.push(nota_G);
+    frase.innerText = notaG;
+    mylistG.appendChild(frase);
+    informacoesG.push(notaG);
     
-    localStorage.setItem("itensG", JSON.stringify(informacoes_G));
+    localStorage.setItem("itensG", JSON.stringify(informacoesG));
 }
 
 //Acrescentar mais itens a lista de JAVA
-var informacoes_JAVA = [];
-var armazenar_JAVA = [];
+var informacoesJAVA = [];
+var armazenarJAVA = [];
 
-function JAVAbtn() {
-    var nota_JAVA = document.querySelector('input#notajava').value;
-    var mylist_JAVA = document.querySelector('ul.java');
+function JavaBtn() {
+    var notaJAVA = document.querySelector('input#notajava').value;
+    var mylistJAVA = document.querySelector('ul.java');
     var frase = document.createElement("li");
+    frase.setAttribute('class', 'li')
 
     if(localStorage.key(4) != null){
-        informacoes_JAVA = armazenar_JAVA
+        informacoesJAVA = armazenarJAVA
     }
 
-    frase.innerText = nota_JAVA;
-    mylist_JAVA.appendChild(frase);
-    informacoes_JAVA.push(nota_JAVA);
+    frase.innerText = notaJAVA;
+    mylistJAVA.appendChild(frase);
+    informacoesJAVA.push(notaJAVA);
     
-    localStorage.setItem("itensJAVA", JSON.stringify(informacoes_JAVA));
+    localStorage.setItem("itensJAVA", JSON.stringify(informacoesJAVA));
 }
 
 //Função que retorna as informações ('li') armazenadas em localStorage para o site
 function safe() {
-    var mylist_H = document.querySelector('ul.html');
-    var mylist_C = document.querySelector('ul.css');
-    var mylist_J = document.querySelector('ul.js');
-    var mylist_G = document.querySelector('ul.git');
-    var mylist_JAVA = document.querySelector('ul.java');
+    var mylistH = document.querySelector('ul.html');
+    var mylistC = document.querySelector('ul.css');
+    var mylistJ = document.querySelector('ul.js');
+    var mylistG = document.querySelector('ul.git');
+    var mylistJAVA = document.querySelector('ul.java');
 
 //Retornar a lista de HTML
-    if(informacoes_H !== null) {
-        var informacoes_H = JSON.parse(localStorage.getItem("itensH"));
-        informacoes_H.forEach(function(informacaoH) {
+    if(informacoesH !== null) {
+        var informacoesH = JSON.parse(localStorage.getItem("itensH"));
+        if(!informacoesH) informacoesH = []
+        informacoesH.forEach(function(informacaoH) {
         
             var frase = document.createElement("li");
-            mylist_H.appendChild(frase);
+            frase.setAttribute('class', 'li')
+            mylistH.appendChild(frase);
             frase.innerText = informacaoH;
-            armazenar_H.push(informacaoH);
+            armazenarH.push(informacaoH);
             
         });
     }
 //Retornar a lista de CSS
-    if(informacoes_C !== null) {
-        var informacoes_C = JSON.parse(localStorage.getItem("itensC"));
-        informacoes_C.forEach(function(informacaoC) {
+    if(informacoesC !== null) {
+        var informacoesC = JSON.parse(localStorage.getItem("itensC"));
+        if(!informacoesC) informacoesC = []
+        informacoesC.forEach(function(informacaoC) {
         
             var frase = document.createElement("li");
-            mylist_C.appendChild(frase);
+            frase.setAttribute('class', 'li')
+            mylistC.appendChild(frase);
             frase.innerText = informacaoC;
-            armazenar_C.push(informacaoC);
+            armazenarC.push(informacaoC);
             
         });
     }
 //Retornar a lista de JS
-    if(informacoes_J !== null) {
-        var informacoes_J = JSON.parse(localStorage.getItem("itensJ"));
-        informacoes_J.forEach(function(informacaoJ) {
+    if(informacoesJ !== null) {
+        var informacoesJ = JSON.parse(localStorage.getItem("itensJ"));
+        if(!informacoesJ) informacoesJ = []
+        informacoesJ.forEach(function(informacaoJ) {
         
             var frase = document.createElement("li");
-            mylist_J.appendChild(frase);
+            frase.setAttribute('class', 'li')
+            mylistJ.appendChild(frase);
             frase.innerText = informacaoJ;
-            armazenar_J.push(informacaoJ);
+            armazenarJ.push(informacaoJ);
             
         });
     }
 //Retornar a lista de GIT_GITHUB
-    if(informacoes_G !== null) {
-        var informacoes_G = JSON.parse(localStorage.getItem("itensG"));
-        informacoes_G.forEach(function(informacaoG) {
+    if(informacoesG !== null) {
+        var informacoesG = JSON.parse(localStorage.getItem("itensG"));
+        if(!informacoesG) informacoesG = []
+        informacoesG.forEach(function(informacaoG) {
         
             var frase = document.createElement("li");
-            mylist_G.appendChild(frase);
+            frase.setAttribute('class', 'li')
+            mylistG.appendChild(frase);
             frase.innerText = informacaoG;
-            armazenar_G.push(informacaoG);
+            armazenarG.push(informacaoG);
             
         });
     }
 //Retornar a lista de JAVA
-    if(informacoes_JAVA !== null) {
-        var informacoes_JAVA = JSON.parse(localStorage.getItem("itensJAVA"));
-        informacoes_JAVA.forEach(function(informacaoJAVA) {
+    if(informacoesJAVA !== null) {
+        var informacoesJAVA = JSON.parse(localStorage.getItem("itensJAVA"));
+        if(!informacoesJAVA) informacoesJAVA = []
+        informacoesJAVA.forEach(function(informacaoJAVA) {
         
             var frase = document.createElement("li");
-            mylist_JAVA.appendChild(frase);
+            frase.setAttribute('class', 'li')
+            mylistJAVA.appendChild(frase);
             frase.innerText = informacaoJAVA;
-            armazenar_JAVA.push(informacaoJAVA);
+            armazenarJAVA.push(informacaoJAVA);
             
         });
     }
