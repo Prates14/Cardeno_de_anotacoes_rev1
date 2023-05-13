@@ -18,47 +18,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.anotacoes .topicoHtml {
-    display: flex;
-    flex-direction: column;
-    background-color: lavender;
-    box-shadow: 2px 2px 8px black;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-bottom: 4px;
-}
-
-.anotacoes .topicoCss {
-    display: flex;
-    flex-direction: column;
-    background-color: lavender;
-    box-shadow: 2px 2px 8px black;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-bottom: 4px;
-}
-
-.anotacoes .topicoJs {
-    display: flex;
-    flex-direction: column;
-    background-color: lavender;
-    box-shadow: 2px 2px 8px black;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-bottom: 4px;
-}
-
-.anotacoes .topicoGit {
-    display: flex;
-    flex-direction: column;
-    background-color: lavender;
-    box-shadow: 2px 2px 8px black;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-bottom: 4px;
-}
-
-.anotacoes .topicoJava {
+.anotacoes .topicoHtml, .topicoCss, .topicoJs, .topicoGit, .topicoJava {
     display: flex;
     flex-direction: column;
     background-color: lavender;
@@ -80,8 +40,8 @@ body {
     font-family: cursive, 'Courier New', Courier, monospace;
 }
 
-.anotacoes input {
-    width: 1730px;
+#notahtml, #notacss, #notajs, #notagit, #notajava {
+    width: 95%;
     height: 20px;
 }
 
