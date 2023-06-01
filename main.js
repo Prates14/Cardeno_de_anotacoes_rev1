@@ -5,6 +5,7 @@ var container2 = document.querySelector('ul.css'); //lista css
 var container3 = document.querySelector('ul.js'); //lista js
 var container4 = document.querySelector('ul.git'); //lista git
 var container5 = document.querySelector('ul.java'); //lista java
+var container6 = document.querySelector('ul.react'); //lista react
 
 //Mostrar ou ocultar itens da lista de html
 function mostrar1() {
@@ -44,6 +45,14 @@ function mostrar5() {
         container5.style.display = 'none';
     } else {
         container5.style.display = 'block';
+    }
+}
+//Mostrar ou ocultar itens da lista de reactJS
+function mostrar6() {
+    if(container6.style.display === 'block') {
+        container6.style.display = 'none';
+    } else {
+        container6.style.display = 'block';
     }
 }
 
@@ -152,6 +161,27 @@ function JavaBtn() {
     localStorage.setItem("itensJAVA", JSON.stringify(informacoesJAVA));
 }
 
+//Acrescentar mais itens a lista de REACTjs
+var informacoesR = [];
+var armazenarR = [];
+
+function ReactBtn() {
+    var notaR = document.querySelector('input#notareact').value;
+    var mylistR = document.querySelector('ul.react');
+    var frase = document.createElement("li");
+    frase.setAttribute('class', 'li')
+
+    if(localStorage.key(5) != null){
+        informacoesR = armazenarR
+    }
+
+    frase.innerText = notaR;
+    mylistR.appendChild(frase);
+    informacoesR.push(notaR);
+    
+    localStorage.setItem("itensR", JSON.stringify(informacoesR));
+}
+
 //Função que retorna as informações ('li') armazenadas em localStorage para o site
 function safe() {
     var mylistH = document.querySelector('ul.html');
@@ -159,6 +189,7 @@ function safe() {
     var mylistJ = document.querySelector('ul.js');
     var mylistG = document.querySelector('ul.git');
     var mylistJAVA = document.querySelector('ul.java');
+    var mylistR = document.querySelector('ul.react');
 
 //Retornar a lista de HTML
     if(informacoesH !== null) {
@@ -227,6 +258,20 @@ function safe() {
             mylistJAVA.appendChild(frase);
             frase.innerText = informacaoJAVA;
             armazenarJAVA.push(informacaoJAVA);
+            
+        });
+    }
+//Retornar a lista de REACTjs
+    if(informacoesR !== null) {
+        var informacoesR = JSON.parse(localStorage.getItem("itensR"));
+        if(!informacoesR) informacoesR = []
+        informacoesR.forEach(function(informacaoR) {
+        
+            var frase = document.createElement("li");
+            frase.setAttribute('class', 'li')
+            mylistR.appendChild(frase);
+            frase.innerText = informacaoR;
+            armazenarR.push(informacaoR);
             
         });
     }

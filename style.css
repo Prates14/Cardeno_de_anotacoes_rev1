@@ -18,7 +18,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.anotacoes .topicoHtml, .topicoCss, .topicoJs, .topicoGit, .topicoJava {
+.anotacoes .topicoHtml, .topicoCss, .topicoJs, .topicoGit, .topicoJava, .topicoReact {
     display: flex;
     flex-direction: column;
     background-color: lavender;
@@ -40,7 +40,7 @@ body {
     font-family: cursive, 'Courier New', Courier, monospace;
 }
 
-#notahtml, #notacss, #notajs, #notagit, #notajava {
+#notahtml, #notacss, #notajs, #notagit, #notajava, #notareact {
     width: 95%;
     height: 20px;
 }
