@@ -75,6 +75,8 @@ function HtmlBtn() {
     informacoesH.push(notaH);
     
     localStorage.setItem("itensH", JSON.stringify(informacoesH));
+    document.getElementById('notahtml').value = '';
+    document.getElementById('notahtml').focus();
 }
 
 //Acrescentar mais itens a lista de CSS
@@ -96,6 +98,8 @@ function CssBtn() {
     informacoesC.push(notaC);
     
     localStorage.setItem("itensC", JSON.stringify(informacoesC));
+    document.getElementById('notacss').value = '';
+    document.getElementById('notacss').focus();
 }
 
 //Acrescentar mais itens a lista de JS
@@ -117,6 +121,8 @@ function JsBtn() {
     informacoesJ.push(notaJ);
     
     localStorage.setItem("itensJ", JSON.stringify(informacoesJ));
+    document.getElementById('notajs').value = '';
+    document.getElementById('notajs').focus();
 }
 
 //Acrescentar mais itens a lista de GIT-GITHUB
@@ -138,6 +144,8 @@ function GitBtn() {
     informacoesG.push(notaG);
     
     localStorage.setItem("itensG", JSON.stringify(informacoesG));
+    document.getElementById('notagit').value = '';
+    document.getElementById('notagit').focus();
 }
 
 //Acrescentar mais itens a lista de JAVA
@@ -159,6 +167,8 @@ function JavaBtn() {
     informacoesJAVA.push(notaJAVA);
     
     localStorage.setItem("itensJAVA", JSON.stringify(informacoesJAVA));
+    document.getElementById('notajava').value = '';
+    document.getElementById('notajava').focus();
 }
 
 //Acrescentar mais itens a lista de REACTjs
@@ -180,6 +190,8 @@ function ReactBtn() {
     informacoesR.push(notaR);
     
     localStorage.setItem("itensR", JSON.stringify(informacoesR));
+    document.getElementById('notareact').value = '';
+    document.getElementById('notareact').focus();
 }
 
 //Função que retorna as informações ('li') armazenadas em localStorage para o site
