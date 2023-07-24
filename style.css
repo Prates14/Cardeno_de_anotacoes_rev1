@@ -18,7 +18,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.anotacoes .topicoHtml, .topicoCss, .topicoJs, .topicoGit, .topicoJava, .topicoReact {
+.anotacoes div {
     display: flex;
     flex-direction: column;
     background-color: lavender;
